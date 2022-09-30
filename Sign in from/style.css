@@ -1,0 +1,116 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  background: #141e30;
+}
+.form {
+  padding: 40px 30px;
+  background-color: #b1b2ff;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.form h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #141e30;
+  position: relative;
+}
+.form h2::after {
+  content: '';
+  width: 34px;
+  height: 6px;
+  background: #f96666;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  transition: all 0.3s;
+}
+.form:hover h2::after {
+  width: 100px;
+}
+.form-control {
+  width: 300px;
+  height: 50px;
+  position: relative;
+  margin-bottom: 50px;
+}
+.form-control:nth-child(3) {
+  margin-bottom: 20px;
+}
+.form-control:last-child {
+  margin-bottom: 0;
+}
+.form-control .form-input {
+  width: 100%;
+  height: 100%;
+  padding: 18px 16px;
+  font-size: 16px;
+  color: #141e30;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+}
+.form-control .input-label {
+  color: #06283d;
+  font-size: 16px;
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  transition: all 0.3s;
+}
+
+.form-control .form-input:focus,
+.form-control .form-input:valid {
+  border-color: #47b5ff;
+}
+.form-control .form-input:focus ~ .input-label,
+.form-control .form-input:valid ~ .input-label {
+  color: #06283d;
+  top: -28px;
+  left: 5px;
+  font-size: 20px;
+}
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.checkbox {
+  width: 20px;
+  height: 20px;
+}
+.checkbox-label {
+  color: #141e30;
+  margin-left: 6px;
+  text-align: center;
+  font-size: 16px;
+}
+.form-control button {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  border: none;
+  background-color: #0b9bf5;
+  color: #fff;
+  font-size: 20px;
+  transition: all 0.2s;
+}
+.form-control button:hover,
+.form-control button:active {
+  color: #0b9bf5;
+  background-color: transparent;
+  border: 2px solid #0b9bf5;
+}
