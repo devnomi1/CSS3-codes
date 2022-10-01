@@ -1,0 +1,157 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #0984e3;
+  --secondary-color: #2d3436;
+  --bg-color: #fff;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  background: #141e30;
+}
+
+.form {
+  padding: 40px 30px;
+  background: var(--bg-color);
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.form h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #141e30;
+  position: relative;
+}
+.form-control {
+  width: 300px;
+  height: 70px;
+  position: relative;
+  margin-bottom: 50px;
+}
+.form-control .outline-input {
+  width: 100%;
+  height: 100%;
+  padding: 18px 16px;
+  font-size: 14px;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  outline: none;
+  border-radius: 6px;
+  background-color: transparent;
+}
+.form-control .outline-label {
+  color: var(--secondary-color);
+  font-size: 18px;
+  position: absolute;
+  top: 24px;
+  left: 16px;
+  transition: all 0.3s;
+}
+.outline-input:focus,
+.outline-input:valid {
+  border: 2px solid var(--primary-color);
+}
+.outline-input::placeholder {
+  opacity: 0;
+}
+.outline-input:focus.outline-input::placeholder {
+  opacity: 1;
+}
+.outline-input:focus ~ .outline-label,
+.outline-input:valid ~ .outline-label {
+  color: var(--primary-color);
+  top: -9px;
+  left: 8px;
+  font-size: 14px;
+  background: var(--bg-color);
+  padding: 0 5px;
+}
+/* for standar inputs */
+
+.form-control .standard-input {
+  width: 100%;
+  height: 60px;
+  padding: 20px 0px 0px;
+  font-size: 14px;
+  color: var(--secondary-color);
+  background-color: var(--bg-color);
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--secondary-color);
+}
+.form-control .standard-label {
+  color: var(--secondary-color);
+  font-size: 18px;
+  position: absolute;
+  bottom: 15px;
+  left: 0px;
+  transition: all 0.3s;
+}
+.standard-input:focus,
+.standard-input:valid {
+  border-bottom: 2px solid var(--primary-color);
+}
+.standard-input::placeholder {
+  opacity: 0;
+}
+.standard-input:focus.standard-input::placeholder {
+  opacity: 1;
+}
+.standard-input:focus ~ .standard-label,
+.standard-input:valid ~ .standard-label {
+  color: var(--primary-color);
+  bottom: 45px;
+  font-size: 14px;
+  font-weight: 300;
+  background-color: var(--bg-color);
+}
+/* Filled Inputs */
+.form-control .filled-input {
+  width: 100%;
+  height: 100%;
+  padding: 20px 16px 10px;
+  font-size: 14px;
+  color: var(--secondary-color);
+  outline: none;
+  border: none;
+  border-radius: 6px 6px 0 0;
+  background-color: #e8e8e8;
+  border-bottom: 1px solid var(--secondary-color);
+}
+.form-control .filled-label {
+  color: var(--secondary-color);
+  font-size: 18px;
+  position: absolute;
+  bottom: 24px;
+  left: 16px;
+  transition: all 0.3s;
+}
+.filled-input:focus,
+.filled-input:valid {
+  border-bottom: 2px solid var(--primary-color);
+}
+.filled-input::placeholder {
+  opacity: 0;
+}
+.filled-input:focus.filled-input::placeholder {
+  opacity: 1;
+}
+.filled-input:focus ~ .filled-label,
+.filled-input:valid ~ .filled-label {
+  color: var(--primary-color);
+  bottom: 45px;
+  left: 16px;
+  font-size: 14px;
+  font-weight: 400;
+}

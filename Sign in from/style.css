@@ -72,12 +72,19 @@ body {
   transition: all 0.3s;
 }
 
-.form-control .form-input:focus,
-.form-control .form-input:valid {
-  border-color: #47b5ff;
+ .form-input:focus
+ .form-input:valid {
+  border: 2px solid red;
+  border-color: rgb(197, 15, 15);
 }
-.form-control .form-input:focus ~ .input-label,
-.form-control .form-input:valid ~ .input-label {
+.form-input::placeholder {
+  opacity: 0;
+}
+.form-input:focus.form-input::placeholder {
+  opacity: 1;
+}
+.form-input:focus ~ .input-label,
+.form-input:valid ~ .input-label {
   color: #06283d;
   top: -28px;
   left: 5px;
