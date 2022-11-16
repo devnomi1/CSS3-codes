@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #413DF7;
+  --secondary-color: #3D4852;
+  --bg-color: #fff;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  background: #141e30;
+}
+
+.form {
+  width: 350px;
+  padding: 20px 30px 30px;
+  background: var(--bg-color);
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.brand-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 42px;
+}
+.brand-name .logo {
+  font-size: 14px;
+  font-weight: 700;
+}
+.brand-name .has-account {
+  font-size: 12px;
+}
+.brand-name .has-account span {
+  margin-left: 4px;
+  color: var(--primary-color);
+}
+.form .heading h3 {
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+.form .heading p {
+  font-size: 12px;
+  color: #141e30;
+  position: relative;
+  margin-bottom: 18px;
+}
+.form-control {
+ width: 100%;
+  height: 70px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.form-control .standard-input {
+  width: 100%;
+  height: 60px;
+  padding-top: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  background-color: var(--bg-color);
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--secondary-color);
+}
+.form-control .standard-label {
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 15px;
+  left: 0px;
+  transition: all 0.3s;
+}
+.standard-input:focus,
+.standard-input:valid {
+  border-bottom: 2px solid var(--primary-color);
+}
+.standard-input::placeholder {
+  opacity: 0;
+}
+.standard-input:focus.standard-input::placeholder {
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 400;
+}
+.standard-input:focus ~ .standard-label,
+.standard-input:valid ~ .standard-label {
+  color: var(--primary-color);
+  bottom: 45px;
+  font-size: 14px;
+  font-weight: 300;
+  background-color: var(--bg-color);
+}
+.form-btn {
+  margin-bottom: 16px;
+}
+.form-btn button {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 16px 20px;
+  width: 100%;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+}
+.form-footer p {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+.form-footer h5 {
+  color: var(--secondary-color);
+  font-size: 14px;
+  font-weight: 600;
+}

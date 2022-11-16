@@ -17,9 +17,8 @@ body {
   align-items: center;
   justify-content: center;
   font-family: 'Poppins', sans-serif;
-  background: #141e30;
+  background: #072140;
 }
-
 .form {
   padding: 40px 30px;
   background: var(--bg-color);
